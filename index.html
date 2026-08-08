@@ -1,75 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Portfólio de Vinícius Magalhães — Desenvolvedor Full-Stack em formação, estudante de Análise e Desenvolvimento de Sistemas no IFSP.">
+    content="Portfólio de Vinícius Magalhães — Desenvolvedor Full-Stack em formação. Projetos, tecnologias, experiência e formação.">
 
   <meta name="author" content="Vinícius Magalhães">
 
   <meta property="og:title" content="Vinícius Magalhães | Desenvolvedor Full-Stack">
   <meta property="og:description"
-        content="Portfólio, projetos, experiências e tecnologias de Vinícius Magalhães.">
+    content="Portfólio de Vinícius Magalhães com projetos, tecnologias, experiência e formação.">
   <meta property="og:type" content="website">
 
   <title>Vinícius Magalhães | Desenvolvedor Full-Stack</title>
 
-  <!-- Fonte -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
 
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
-
-    /* =========================================================
-       RESET
-    ========================================================= */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
-    }
-
-    body {
-      font-family: "Inter", sans-serif;
-      background: #080b12;
-      color: #e7eaf0;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font-family: inherit;
-    }
-
-    ::selection {
-      background: #2563eb;
-      color: white;
-    }
 
     /* =========================================================
        VARIÁVEIS
@@ -96,37 +58,99 @@
       --container: 1120px;
     }
 
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button {
+      font-family: inherit;
+    }
+
+
+    ::selection {
+      background: var(--primary);
+      color: white;
+    }
+
+
     /* =========================================================
        BACKGROUND
     ========================================================= */
 
     body::before {
       content: "";
+
       position: fixed;
+
       width: 500px;
       height: 500px;
+
       background: rgba(37, 99, 235, 0.08);
+
       filter: blur(120px);
+
       border-radius: 50%;
+
       top: -200px;
       left: -200px;
+
       pointer-events: none;
+
       z-index: -1;
     }
 
+
     body::after {
       content: "";
+
       position: fixed;
+
       width: 450px;
       height: 450px;
+
       background: rgba(124, 58, 237, 0.06);
+
       filter: blur(120px);
+
       border-radius: 50%;
+
       right: -200px;
       bottom: -200px;
+
       pointer-events: none;
+
       z-index: -1;
     }
+
 
     /* =========================================================
        NAVBAR
@@ -134,68 +158,90 @@
 
     .navbar {
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
 
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
 
       background: rgba(8, 11, 18, 0.82);
+
       border-bottom: 1px solid var(--border);
     }
 
+
     .nav-container {
-      max-width: var(--container);
-      margin: auto;
+      width: min(var(--container), calc(100% - 40px));
+
       height: 70px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      margin: auto;
 
-      padding: 0 24px;
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
     }
+
 
     .logo {
       font-family: "JetBrains Mono", monospace;
+
       font-weight: 600;
+
       font-size: 1.1rem;
     }
+
 
     .logo span {
       color: var(--primary);
     }
 
+
     .nav-links {
       display: flex;
+
       gap: 28px;
+
       list-style: none;
     }
 
+
     .nav-links a {
       color: var(--text-secondary);
+
       font-size: 0.9rem;
+
       transition: 0.2s;
     }
+
 
     .nav-links a:hover {
       color: white;
     }
 
+
     .nav-social {
       display: flex;
+
       gap: 10px;
     }
+
 
     .nav-social a {
       width: 36px;
       height: 36px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
       border: 1px solid var(--border);
+
       border-radius: 10px;
 
       color: var(--text-secondary);
@@ -203,12 +249,17 @@
       transition: 0.25s;
     }
 
+
     .nav-social a:hover {
       color: white;
+
       border-color: rgba(59, 130, 246, 0.5);
+
       background: rgba(59, 130, 246, 0.1);
+
       transform: translateY(-2px);
     }
+
 
     /* =========================================================
        CONTAINER
@@ -216,8 +267,10 @@
 
     .container {
       width: min(var(--container), calc(100% - 40px));
+
       margin: auto;
     }
+
 
     /* =========================================================
        HERO
@@ -227,56 +280,72 @@
       min-height: calc(100vh - 70px);
 
       display: flex;
+
       align-items: center;
 
       padding: 90px 0;
     }
 
+
     .hero-content {
       max-width: 850px;
     }
 
+
     .status {
       display: inline-flex;
+
       align-items: center;
+
       gap: 9px;
 
       padding: 8px 13px;
 
       border: 1px solid rgba(34, 197, 94, 0.2);
+
       background: rgba(34, 197, 94, 0.06);
 
       border-radius: 999px;
 
       color: #86efac;
+
       font-size: 0.8rem;
 
       margin-bottom: 28px;
     }
 
+
     .status-dot {
       width: 7px;
       height: 7px;
+
       background: var(--success);
+
       border-radius: 50%;
 
       box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
     }
 
+
     .hero h1 {
       font-size: clamp(3rem, 7vw, 5.8rem);
+
       line-height: 1.03;
+
       letter-spacing: -0.055em;
 
       margin-bottom: 24px;
     }
 
+
     .hero h1 span {
       color: var(--primary);
     }
 
+
     .hero-subtitle {
       font-size: clamp(1.15rem, 2vw, 1.45rem);
+
       color: var(--text-secondary);
 
       max-width: 720px;
@@ -284,23 +353,32 @@
       margin-bottom: 20px;
     }
 
+
     .hero-description {
       color: var(--text-muted);
+
       max-width: 650px;
 
       margin-bottom: 35px;
     }
 
+
     .hero-buttons {
       display: flex;
+
       gap: 12px;
+
       flex-wrap: wrap;
     }
 
+
     .btn {
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
+
       gap: 9px;
 
       padding: 12px 18px;
@@ -308,6 +386,7 @@
       border-radius: 10px;
 
       font-size: 0.9rem;
+
       font-weight: 600;
 
       transition: 0.25s;
@@ -315,38 +394,50 @@
       cursor: pointer;
     }
 
+
     .btn-primary {
       background: var(--primary);
+
       color: white;
     }
 
+
     .btn-primary:hover {
       background: var(--primary-hover);
+
       transform: translateY(-2px);
     }
+
 
     .btn-secondary {
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.02);
+
+      background: rgba(255, 255, 255, 0.02);
+
       color: var(--text);
     }
 
+
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.06);
+      background: rgba(255, 255, 255, 0.06);
+
       transform: translateY(-2px);
     }
 
+
     /* =========================================================
-       SECTIONS
+       SEÇÕES
     ========================================================= */
 
     section {
       padding: 90px 0;
     }
 
+
     .section-header {
       margin-bottom: 40px;
     }
+
 
     .section-label {
       font-family: "JetBrains Mono", monospace;
@@ -358,29 +449,39 @@
       margin-bottom: 10px;
     }
 
+
     .section-title {
       font-size: clamp(2rem, 4vw, 2.8rem);
+
       letter-spacing: -0.035em;
+
       margin-bottom: 10px;
     }
 
+
     .section-description {
       color: var(--text-muted);
+
       max-width: 650px;
     }
 
+
     /* =========================================================
-       ABOUT
+       SOBRE
     ========================================================= */
 
     .about-grid {
       display: grid;
+
       grid-template-columns: 1.4fr 0.8fr;
+
       gap: 25px;
     }
 
+
     .glass-card {
       background: rgba(17, 23, 34, 0.7);
+
       border: 1px solid var(--border);
 
       border-radius: var(--radius);
@@ -390,30 +491,41 @@
       backdrop-filter: blur(12px);
     }
 
+
     .about-text {
       color: var(--text-secondary);
     }
+
 
     .about-text p + p {
       margin-top: 18px;
     }
 
+
     .highlight {
       color: white;
+
       font-weight: 600;
     }
 
+
     .quick-info {
       display: flex;
+
       flex-direction: column;
+
       gap: 20px;
     }
 
+
     .info-item {
       display: flex;
+
       gap: 14px;
+
       align-items: flex-start;
     }
+
 
     .info-icon {
       width: 40px;
@@ -422,42 +534,56 @@
       flex-shrink: 0;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
       border-radius: 10px;
 
       background: rgba(59, 130, 246, 0.1);
+
       color: var(--primary);
     }
 
+
     .info-item small {
       color: var(--text-muted);
+
       display: block;
+
       font-size: 0.75rem;
     }
 
+
     .info-item strong {
       display: block;
+
       margin-top: 2px;
+
       font-size: 0.9rem;
     }
 
+
     /* =========================================================
-       GITHUB STATS
+       ESTATÍSTICAS GITHUB
     ========================================================= */
 
     .github-stats {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 14px;
 
       margin-top: 25px;
     }
 
+
     .stat-card {
       background: var(--card);
+
       border: 1px solid var(--border);
+
       border-radius: 14px;
 
       padding: 22px;
@@ -465,31 +591,41 @@
       text-align: center;
     }
 
+
     .stat-number {
       font-size: 1.8rem;
+
       font-weight: 800;
+
       margin-bottom: 3px;
     }
 
+
     .stat-label {
       font-size: 0.75rem;
+
       color: var(--text-muted);
     }
 
+
     /* =========================================================
-       PROJECTS
+       PROJETOS
     ========================================================= */
 
     .project-controls {
       display: flex;
+
       gap: 8px;
+
       flex-wrap: wrap;
 
       margin-bottom: 30px;
     }
 
+
     .filter-btn {
       border: 1px solid var(--border);
+
       background: transparent;
 
       color: var(--text-secondary);
@@ -505,23 +641,31 @@
       transition: 0.2s;
     }
 
+
     .filter-btn:hover,
     .filter-btn.active {
       background: var(--primary);
+
       border-color: var(--primary);
+
       color: white;
     }
 
+
     .projects-grid {
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
+
       gap: 18px;
     }
+
 
     .project-card {
       position: relative;
 
       background: var(--card);
+
       border: 1px solid var(--border);
 
       border-radius: var(--radius);
@@ -529,6 +673,7 @@
       padding: 25px;
 
       display: flex;
+
       flex-direction: column;
 
       min-height: 280px;
@@ -537,6 +682,7 @@
 
       overflow: hidden;
     }
+
 
     .project-card::before {
       content: "";
@@ -560,59 +706,81 @@
       transition: 0.25s;
     }
 
+
     .project-card:hover {
       transform: translateY(-5px);
+
       border-color: rgba(59, 130, 246, 0.25);
+
       background: var(--card-hover);
     }
+
 
     .project-card:hover::before {
       opacity: 1;
     }
 
+
     .project-top {
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
       margin-bottom: 20px;
     }
+
 
     .project-icon {
       width: 42px;
       height: 42px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       background: rgba(59, 130, 246, 0.1);
+
       color: var(--primary);
 
       border-radius: 10px;
     }
 
+
     .project-links {
       display: flex;
+
       gap: 10px;
     }
 
+
     .project-links a {
       color: var(--text-muted);
+
       transition: 0.2s;
     }
+
 
     .project-links a:hover {
       color: white;
     }
 
+
     .project-card h3 {
       font-size: 1.15rem;
+
       margin-bottom: 10px;
+
+      word-break: break-word;
     }
+
 
     .project-description {
       color: var(--text-muted);
+
       font-size: 0.87rem;
 
       flex: 1;
@@ -620,9 +788,12 @@
       margin-bottom: 20px;
     }
 
+
     .project-meta {
       display: flex;
+
       align-items: center;
+
       gap: 16px;
 
       color: var(--text-muted);
@@ -632,32 +803,45 @@
       margin-bottom: 17px;
     }
 
+
     .project-meta span {
       display: flex;
+
       align-items: center;
+
       gap: 5px;
     }
+
 
     .language-dot {
       width: 8px;
       height: 8px;
+
       border-radius: 50%;
+
       background: var(--primary);
     }
 
+
     .project-footer {
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
       gap: 10px;
     }
 
+
     .topics {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 6px;
     }
+
 
     .topic {
       font-size: 0.68rem;
@@ -666,22 +850,29 @@
 
       border-radius: 5px;
 
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
+
       color: var(--text-secondary);
     }
 
+
     .project-date {
       color: var(--text-muted);
+
       font-size: 0.7rem;
+
       white-space: nowrap;
     }
+
 
     .featured {
       border-color: rgba(59, 130, 246, 0.35);
     }
 
+
     .featured-badge {
       position: absolute;
+
       top: 18px;
       right: 18px;
 
@@ -692,8 +883,10 @@
       border-radius: 5px;
 
       background: rgba(59, 130, 246, 0.12);
+
       color: #93c5fd;
     }
+
 
     /* =========================================================
        LOADING
@@ -703,16 +896,19 @@
       grid-column: 1 / -1;
 
       padding: 50px;
+
       text-align: center;
 
       color: var(--text-muted);
     }
 
+
     .spinner {
       width: 30px;
       height: 30px;
 
-      border: 3px solid rgba(255,255,255,0.1);
+      border: 3px solid rgba(255, 255, 255, 0.1);
+
       border-top-color: var(--primary);
 
       border-radius: 50%;
@@ -722,11 +918,15 @@
       margin: 0 auto 15px;
     }
 
+
     @keyframes spin {
+
       to {
         transform: rotate(360deg);
       }
+
     }
+
 
     /* =========================================================
        SKILLS
@@ -734,12 +934,16 @@
 
     .skills-grid {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 15px;
     }
 
+
     .skill-group {
       background: var(--card);
+
       border: 1px solid var(--border);
 
       padding: 22px;
@@ -747,16 +951,29 @@
       border-radius: 14px;
     }
 
+
     .skill-group h3 {
       font-size: 0.9rem;
+
       margin-bottom: 15px;
     }
 
+
+    .skill-group h3 i {
+      color: var(--primary);
+
+      margin-right: 7px;
+    }
+
+
     .skill-list {
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 7px;
     }
+
 
     .skill {
       font-family: "JetBrains Mono", monospace;
@@ -767,9 +984,11 @@
 
       border-radius: 6px;
 
-      background: rgba(59,130,246,0.08);
+      background: rgba(59, 130, 246, 0.08);
+
       color: #a9c7ff;
     }
+
 
     /* =========================================================
        TIMELINE
@@ -785,20 +1004,24 @@
       margin-left: 10px;
     }
 
+
     .timeline-item {
       position: relative;
 
       padding: 0 0 40px 35px;
     }
 
+
     .timeline-item:last-child {
       padding-bottom: 0;
     }
+
 
     .timeline-dot {
       position: absolute;
 
       left: -5px;
+
       top: 3px;
 
       width: 9px;
@@ -808,8 +1031,9 @@
 
       background: var(--primary);
 
-      box-shadow: 0 0 15px rgba(59,130,246,0.5);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
     }
+
 
     .timeline-date {
       font-family: "JetBrains Mono", monospace;
@@ -821,34 +1045,46 @@
       margin-bottom: 7px;
     }
 
+
     .timeline h3 {
       font-size: 1.05rem;
+
       margin-bottom: 3px;
     }
 
+
     .timeline-company {
       color: var(--text-secondary);
+
       font-size: 0.85rem;
+
       margin-bottom: 10px;
     }
 
+
     .timeline-description {
       color: var(--text-muted);
+
       font-size: 0.85rem;
     }
 
+
     /* =========================================================
-       COURSES
+       CURSOS
     ========================================================= */
 
     .courses {
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
+
       gap: 15px;
     }
 
+
     .course {
       display: flex;
+
       gap: 15px;
 
       padding: 20px;
@@ -860,6 +1096,7 @@
       border-radius: 13px;
     }
 
+
     .course-icon {
       width: 38px;
       height: 38px;
@@ -867,27 +1104,35 @@
       flex-shrink: 0;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       border-radius: 9px;
 
-      background: rgba(59,130,246,0.1);
+      background: rgba(59, 130, 246, 0.1);
+
       color: var(--primary);
     }
 
+
     .course h3 {
       font-size: 0.88rem;
+
       margin-bottom: 4px;
     }
 
+
     .course p {
       color: var(--text-muted);
+
       font-size: 0.75rem;
     }
 
+
     /* =========================================================
-       CONTACT
+       CONTATO
     ========================================================= */
 
     .contact-card {
@@ -898,7 +1143,7 @@
       background:
         radial-gradient(
           circle at center,
-          rgba(59,130,246,0.12),
+          rgba(59, 130, 246, 0.12),
           transparent 55%
         ),
         var(--card);
@@ -908,10 +1153,13 @@
       border-radius: 20px;
     }
 
+
     .contact-card h2 {
       font-size: clamp(2rem, 4vw, 3rem);
+
       margin-bottom: 15px;
     }
+
 
     .contact-card p {
       color: var(--text-muted);
@@ -921,12 +1169,17 @@
       margin: 0 auto 28px;
     }
 
+
     .contact-links {
       display: flex;
+
       justify-content: center;
+
       gap: 10px;
+
       flex-wrap: wrap;
     }
+
 
     /* =========================================================
        FOOTER
@@ -944,9 +1197,11 @@
       text-align: center;
     }
 
+
     footer span {
       color: var(--primary);
     }
+
 
     /* =========================================================
        ANIMAÇÃO
@@ -954,17 +1209,23 @@
 
     .fade-in {
       opacity: 0;
+
       transform: translateY(20px);
 
       animation: fadeIn 0.7s ease forwards;
     }
 
+
     @keyframes fadeIn {
+
       to {
         opacity: 1;
+
         transform: translateY(0);
       }
+
     }
+
 
     /* =========================================================
        RESPONSIVIDADE
@@ -976,15 +1237,18 @@
         display: none;
       }
 
+
       .about-grid {
         grid-template-columns: 1fr;
       }
+
 
       .skills-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
     }
+
 
     @media (max-width: 700px) {
 
@@ -992,30 +1256,38 @@
         width: min(100% - 28px, var(--container));
       }
 
+
       section {
         padding: 65px 0;
       }
 
+
       .hero {
         padding: 70px 0;
+
         min-height: auto;
       }
+
 
       .hero h1 {
         font-size: 3rem;
       }
 
+
       .projects-grid {
         grid-template-columns: 1fr;
       }
+
 
       .github-stats {
         grid-template-columns: repeat(2, 1fr);
       }
 
+
       .courses {
         grid-template-columns: 1fr;
       }
+
 
       .skills-grid {
         grid-template-columns: 1fr 1fr;
@@ -1023,26 +1295,32 @@
 
     }
 
+
     @media (max-width: 450px) {
 
       .nav-social {
         display: none;
       }
 
+
       .hero h1 {
         font-size: 2.6rem;
       }
+
 
       .skills-grid {
         grid-template-columns: 1fr;
       }
 
+
       .github-stats {
         grid-template-columns: 1fr 1fr;
       }
 
+
       .project-footer {
         align-items: flex-start;
+
         flex-direction: column;
       }
 
@@ -1051,7 +1329,9 @@
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =======================================================
        NAVBAR
@@ -1061,44 +1341,86 @@
 
     <div class="nav-container">
 
+
       <a href="#inicio" class="logo">
         magal<span>.</span>dev
       </a>
 
+
       <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#contato">Contato</a></li>
+
+        <li>
+          <a href="#sobre">
+            Sobre
+          </a>
+        </li>
+
+        <li>
+          <a href="#projetos">
+            Projetos
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills">
+            Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="#experiencia">
+            Experiência
+          </a>
+        </li>
+
+        <li>
+          <a href="#cursos">
+            Cursos
+          </a>
+        </li>
+
+        <li>
+          <a href="#contato">
+            Contato
+          </a>
+        </li>
+
       </ul>
 
+
       <div class="nav-social">
+
 
         <a
           href="https://github.com/Viniciusmagal"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
+          aria-label="GitHub">
+
           <i class="fab fa-github"></i>
+
         </a>
+
 
         <a
           href="https://www.linkedin.com/in/vinicius-magalh%C3%A3es-5137402b9"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
+          aria-label="LinkedIn">
+
           <i class="fab fa-linkedin"></i>
+
         </a>
+
 
         <a
           href="mailto:lucavimagal@gmail.com"
-          aria-label="Enviar e-mail"
-        >
+          aria-label="E-mail">
+
           <i class="fas fa-envelope"></i>
+
         </a>
+
 
       </div>
 
@@ -1109,6 +1431,7 @@
 
   <main>
 
+
     <!-- =====================================================
          HERO
     ====================================================== -->
@@ -1117,55 +1440,85 @@
 
       <div class="container">
 
+
         <div class="hero-content fade-in">
 
+
           <div class="status">
+
             <span class="status-dot"></span>
+
             Disponível para oportunidades
+
           </div>
 
+
           <h1>
+
             Olá, eu sou<br>
+
             <span>Vinícius Magalhães.</span>
+
           </h1>
 
+
           <p class="hero-subtitle">
+
             Desenvolvedor Full-Stack em formação.
+
           </p>
 
+
           <p class="hero-description">
+
             Estudante de Análise e Desenvolvimento de Sistemas no IFSP,
             apaixonado por tecnologia e desenvolvimento de software.
-            Construo aplicações web, APIs e sistemas utilizando tecnologias
-            modernas de frontend, backend e bancos de dados.
+            Construo aplicações web, APIs e sistemas utilizando
+            tecnologias modernas de frontend, backend e bancos de dados.
+
           </p>
+
 
           <div class="hero-buttons">
 
-            <a href="#projetos" class="btn btn-primary">
+
+            <a
+              href="#projetos"
+              class="btn btn-primary">
+
               <i class="fas fa-code"></i>
+
               Ver meus projetos
+
             </a>
+
 
             <a
               href="https://github.com/Viniciusmagal"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
+              class="btn btn-secondary">
+
               <i class="fab fa-github"></i>
+
               GitHub
+
             </a>
+
 
             <a
               href="mailto:lucavimagal@gmail.com"
-              class="btn btn-secondary"
-            >
+              class="btn btn-secondary">
+
               <i class="fas fa-envelope"></i>
+
               Entrar em contato
+
             </a>
 
+
           </div>
+
 
         </div>
 
@@ -1182,15 +1535,18 @@
 
       <div class="container">
 
+
         <div class="section-header">
 
           <div class="section-label">
             // sobre mim
           </div>
 
+
           <h2 class="section-title">
             Desenvolvendo ideias em código.
           </h2>
+
 
           <p class="section-description">
             Um pouco sobre minha trajetória e o que venho construindo.
@@ -1201,43 +1557,63 @@
 
         <div class="about-grid">
 
+
           <div class="glass-card about-text">
 
+
             <p>
+
               Sou estudante de
+
               <span class="highlight">
                 Análise e Desenvolvimento de Sistemas
               </span>
+
               no Instituto Federal de São Paulo (IFSP), com formação
               técnica em Desenvolvimento de Sistemas pela Etec.
+
             </p>
 
+
             <p>
+
               Tenho experiência prática desenvolvendo aplicações web
               utilizando
+
               <span class="highlight">
                 React, TypeScript, Python, Flask, Java, SQL e Supabase
               </span>.
+
             </p>
 
+
             <p>
+
               Gosto de transformar problemas em soluções através da
               programação, explorando arquitetura de software, APIs,
               bancos de dados, interfaces e integração entre sistemas.
+
             </p>
 
+
             <p>
+
               Atualmente busco uma oportunidade de
+
               <span class="highlight">
                 estágio ou posição Júnior em desenvolvimento de software
               </span>,
+
               onde possa continuar evoluindo e contribuir com projetos reais.
+
             </p>
+
 
           </div>
 
 
           <div class="glass-card quick-info">
+
 
             <div class="info-item">
 
@@ -1245,9 +1621,17 @@
                 <i class="fas fa-graduation-cap"></i>
               </div>
 
+
               <div>
-                <small>Formação</small>
-                <strong>ADS — IFSP</strong>
+
+                <small>
+                  Formação
+                </small>
+
+                <strong>
+                  ADS — IFSP
+                </strong>
+
               </div>
 
             </div>
@@ -1259,9 +1643,17 @@
                 <i class="fas fa-location-dot"></i>
               </div>
 
+
               <div>
-                <small>Localização</small>
-                <strong>Atibaia, SP — Brasil</strong>
+
+                <small>
+                  Localização
+                </small>
+
+                <strong>
+                  Atibaia, SP — Brasil
+                </strong>
+
               </div>
 
             </div>
@@ -1273,9 +1665,17 @@
                 <i class="fas fa-laptop-code"></i>
               </div>
 
+
               <div>
-                <small>Área</small>
-                <strong>Desenvolvimento de Software</strong>
+
+                <small>
+                  Área
+                </small>
+
+                <strong>
+                  Desenvolvimento de Software
+                </strong>
+
               </div>
 
             </div>
@@ -1287,26 +1687,43 @@
                 <i class="fas fa-briefcase"></i>
               </div>
 
+
               <div>
-                <small>Objetivo</small>
-                <strong>Estágio / Desenvolvedor Júnior</strong>
+
+                <small>
+                  Objetivo
+                </small>
+
+                <strong>
+                  Estágio / Desenvolvedor Júnior
+                </strong>
+
               </div>
 
             </div>
 
+
           </div>
+
 
         </div>
 
 
-        <!-- GITHUB STATS -->
+        <!-- =================================================
+             GITHUB STATS
+        ================================================== -->
 
         <div class="github-stats">
 
+
           <div class="stat-card">
 
-            <div class="stat-number" id="repo-count">
+            <div
+              class="stat-number"
+              id="repo-count">
+
               —
+
             </div>
 
             <div class="stat-label">
@@ -1318,8 +1735,12 @@
 
           <div class="stat-card">
 
-            <div class="stat-number" id="followers-count">
+            <div
+              class="stat-number"
+              id="followers-count">
+
               —
+
             </div>
 
             <div class="stat-label">
@@ -1331,8 +1752,12 @@
 
           <div class="stat-card">
 
-            <div class="stat-number" id="following-count">
+            <div
+              class="stat-number"
+              id="following-count">
+
               —
+
             </div>
 
             <div class="stat-label">
@@ -1344,8 +1769,12 @@
 
           <div class="stat-card">
 
-            <div class="stat-number" id="stars-count">
+            <div
+              class="stat-number"
+              id="stars-count">
+
               —
+
             </div>
 
             <div class="stat-label">
@@ -1353,6 +1782,7 @@
             </div>
 
           </div>
+
 
         </div>
 
@@ -1362,52 +1792,72 @@
 
 
     <!-- =====================================================
-         PROJETOS
+         PROJETOS GITHUB
     ====================================================== -->
 
     <section id="projetos">
 
       <div class="container">
 
+
         <div class="section-header">
 
           <div class="section-label">
-            // projetos
+            // github
           </div>
 
+
           <h2 class="section-title">
-            O que eu construí.
+            Meus projetos.
           </h2>
 
+
           <p class="section-description">
-            Meus projetos públicos são carregados diretamente do GitHub.
-            Criei algo novo? Ele pode aparecer aqui automaticamente.
+
+            Todos os meus repositórios públicos do GitHub aparecem
+            automaticamente aqui.
+
           </p>
 
         </div>
 
 
-        <div id="filters" class="project-controls">
+        <!-- FILTROS -->
+
+        <div
+          id="filters"
+          class="project-controls">
+
 
           <button
             class="filter-btn active"
-            data-filter="all"
-          >
+            data-filter="all">
+
             Todos
+
           </button>
+
 
         </div>
 
 
-        <div id="projects-container" class="projects-grid">
+        <!-- PROJETOS -->
+
+        <div
+          id="projects-container"
+          class="projects-grid">
+
 
           <div class="loading">
 
             <div class="spinner"></div>
 
-            Carregando projetos do GitHub...
+            <p>
+              Carregando meus projetos do GitHub...
+            </p>
 
           </div>
+
 
         </div>
 
@@ -1424,18 +1874,24 @@
 
       <div class="container">
 
+
         <div class="section-header">
 
           <div class="section-label">
             // tecnologias
           </div>
 
+
           <h2 class="section-title">
             Minha stack.
           </h2>
 
+
           <p class="section-description">
-            Tecnologias e ferramentas que venho utilizando nos meus projetos.
+
+            Tecnologias e ferramentas que venho utilizando
+            nos meus projetos.
+
           </p>
 
         </div>
@@ -1444,80 +1900,160 @@
         <div class="skills-grid">
 
 
+          <!-- FRONTEND -->
+
           <div class="skill-group">
 
             <h3>
+
               <i class="fas fa-desktop"></i>
+
               Frontend
+
             </h3>
+
 
             <div class="skill-list">
 
-              <span class="skill">React</span>
-              <span class="skill">TypeScript</span>
-              <span class="skill">JavaScript</span>
-              <span class="skill">Next.js</span>
-              <span class="skill">HTML</span>
-              <span class="skill">CSS</span>
+              <span class="skill">
+                React
+              </span>
+
+              <span class="skill">
+                TypeScript
+              </span>
+
+              <span class="skill">
+                JavaScript
+              </span>
+
+              <span class="skill">
+                Next.js
+              </span>
+
+              <span class="skill">
+                HTML
+              </span>
+
+              <span class="skill">
+                CSS
+              </span>
 
             </div>
 
           </div>
 
 
+          <!-- BACKEND -->
+
           <div class="skill-group">
 
             <h3>
+
               <i class="fas fa-server"></i>
+
               Backend
+
             </h3>
+
 
             <div class="skill-list">
 
-              <span class="skill">Python</span>
-              <span class="skill">Flask</span>
-              <span class="skill">Java</span>
-              <span class="skill">REST API</span>
+              <span class="skill">
+                Python
+              </span>
+
+              <span class="skill">
+                Flask
+              </span>
+
+              <span class="skill">
+                Java
+              </span>
+
+              <span class="skill">
+                REST API
+              </span>
 
             </div>
 
           </div>
 
 
+          <!-- BANCO -->
+
           <div class="skill-group">
 
             <h3>
+
               <i class="fas fa-database"></i>
+
               Banco de Dados
+
             </h3>
+
 
             <div class="skill-list">
 
-              <span class="skill">PostgreSQL</span>
-              <span class="skill">Supabase</span>
-              <span class="skill">MySQL</span>
-              <span class="skill">SQLite</span>
-              <span class="skill">SQL</span>
+              <span class="skill">
+                PostgreSQL
+              </span>
+
+              <span class="skill">
+                Supabase
+              </span>
+
+              <span class="skill">
+                MySQL
+              </span>
+
+              <span class="skill">
+                SQLite
+              </span>
+
+              <span class="skill">
+                SQL
+              </span>
 
             </div>
 
           </div>
 
 
+          <!-- FERRAMENTAS -->
+
           <div class="skill-group">
 
             <h3>
+
               <i class="fas fa-toolbox"></i>
+
               Ferramentas
+
             </h3>
+
 
             <div class="skill-list">
 
-              <span class="skill">Git</span>
-              <span class="skill">GitHub</span>
-              <span class="skill">VS Code</span>
-              <span class="skill">Figma</span>
-              <span class="skill">Wireshark</span>
+              <span class="skill">
+                Git
+              </span>
+
+              <span class="skill">
+                GitHub
+              </span>
+
+              <span class="skill">
+                VS Code
+              </span>
+
+              <span class="skill">
+                Figma
+              </span>
+
+              <span class="skill">
+                Wireshark
+              </span>
 
             </div>
 
@@ -1539,18 +2075,23 @@
 
       <div class="container">
 
+
         <div class="section-header">
 
           <div class="section-label">
             // trajetória
           </div>
 
+
           <h2 class="section-title">
             Experiência & formação.
           </h2>
 
+
           <p class="section-description">
+
             Minha trajetória acadêmica e profissional.
+
           </p>
 
         </div>
@@ -1559,91 +2100,120 @@
         <div class="timeline">
 
 
+          <!-- IFSP -->
+
           <div class="timeline-item">
 
             <div class="timeline-dot"></div>
+
 
             <div class="timeline-date">
               ATUALMENTE
             </div>
 
+
             <h3>
               Análise e Desenvolvimento de Sistemas
             </h3>
+
 
             <div class="timeline-company">
               Instituto Federal de São Paulo — IFSP
             </div>
 
+
             <p class="timeline-description">
+
               Graduação focada em desenvolvimento de software,
               programação, banco de dados, redes, engenharia de software,
               estruturas de dados e desenvolvimento de sistemas.
+
             </p>
 
           </div>
 
 
+          <!-- REDE DOR -->
+
           <div class="timeline-item">
 
             <div class="timeline-dot"></div>
+
 
             <div class="timeline-date">
               OUT/2024 — MAI/2026
             </div>
 
+
             <h3>
               Aprendiz / Auxiliar Administrativo
             </h3>
+
 
             <div class="timeline-company">
               Rede D'Or — Hospital Novo Atibaia
             </div>
 
+
             <p class="timeline-description">
+
               Organização de prontuários, registro de ponto,
               suporte administrativo aos colaboradores e atuação
               em processos organizacionais.
+
             </p>
 
           </div>
 
 
+          <!-- FAÇA A FESTA -->
+
           <div class="timeline-item">
 
             <div class="timeline-dot"></div>
+
 
             <div class="timeline-date">
               JAN/2024 — SET/2024
             </div>
 
+
             <h3>
               Auxiliar de Comércio Jr
             </h3>
+
 
             <div class="timeline-company">
               Faça a Festa
             </div>
 
+
             <p class="timeline-description">
+
               Reposição de mercadorias, organização e controle
               de estoque e atendimento ao cliente.
+
             </p>
 
           </div>
 
 
+          <!-- CANTINA -->
+
           <div class="timeline-item">
 
             <div class="timeline-dot"></div>
+
 
             <div class="timeline-date">
               AGO/2021 — JUN/2022
             </div>
 
+
             <h3>
               Atendente em Cantina Escolar
             </h3>
+
 
             <div class="timeline-company">
               Etec Prof. Carmine Biagio Tundisi
@@ -1652,26 +2222,34 @@
           </div>
 
 
+          <!-- ETEC -->
+
           <div class="timeline-item">
 
             <div class="timeline-dot"></div>
+
 
             <div class="timeline-date">
               CONCLUÍDO — 2023
             </div>
 
+
             <h3>
               Técnico em Desenvolvimento de Sistemas
             </h3>
+
 
             <div class="timeline-company">
               Etec Prof. Carmine Biagio Tundisi
             </div>
 
+
             <p class="timeline-description">
+
               Ensino médio integrado ao técnico,
               com formação em programação, banco de dados,
               desenvolvimento web e fundamentos de sistemas.
+
             </p>
 
           </div>
@@ -1692,11 +2270,13 @@
 
       <div class="container">
 
+
         <div class="section-header">
 
           <div class="section-label">
             // aprendizado
           </div>
+
 
           <h2 class="section-title">
             Cursos & certificações.
@@ -1714,14 +2294,17 @@
               <i class="fas fa-code"></i>
             </div>
 
+
             <div>
 
               <h3>
                 React JS 19 e Next.js 15
               </h3>
 
+
               <p>
-                Curso atualizado para tecnologias modernas do ecossistema React.
+                Curso atualizado para tecnologias modernas
+                do ecossistema React.
               </p>
 
             </div>
@@ -1735,14 +2318,17 @@
               <i class="fab fa-python"></i>
             </div>
 
+
             <div>
 
               <h3>
                 Python 3 — Básico ao Avançado
               </h3>
 
+
               <p>
-                Desenvolvimento backend e programação com Python — Udemy.
+                Desenvolvimento backend e programação
+                com Python — Udemy.
               </p>
 
             </div>
@@ -1756,14 +2342,17 @@
               <i class="fas fa-globe"></i>
             </div>
 
+
             <div>
 
               <h3>
                 Desenvolvimento Web
               </h3>
 
+
               <p>
-                Desenvolvimento Web e Lógica de Programação — Udemy.
+                Desenvolvimento Web e Lógica de Programação —
+                Udemy.
               </p>
 
             </div>
@@ -1777,11 +2366,13 @@
               <i class="fas fa-brain"></i>
             </div>
 
+
             <div>
 
               <h3>
                 Inteligência Artificial
               </h3>
+
 
               <p>
                 Curso realizado pelo SENAI — concluído em 2023.
@@ -1798,11 +2389,13 @@
               <i class="fas fa-certificate"></i>
             </div>
 
+
             <div>
 
               <h3>
                 Capacitação Profissional
               </h3>
+
 
               <p>
                 CIEE / Fundação Bradesco — concluído em 2026.
@@ -1828,32 +2421,42 @@
 
       <div class="container">
 
+
         <div class="contact-card">
+
 
           <div class="section-label">
             // contato
           </div>
 
+
           <h2>
             Vamos construir algo?
           </h2>
 
+
           <p>
+
             Estou aberto a oportunidades de estágio e posições
             Júnior em desenvolvimento de software.
-            Se quiser conversar sobre tecnologia, projetos ou oportunidades,
-            é só entrar em contato.
+
+            Se quiser conversar sobre tecnologia, projetos
+            ou oportunidades, é só entrar em contato.
+
           </p>
 
 
           <div class="contact-links">
 
+
             <a
               href="mailto:lucavimagal@gmail.com"
-              class="btn btn-primary"
-            >
+              class="btn btn-primary">
+
               <i class="fas fa-envelope"></i>
+
               Enviar e-mail
+
             </a>
 
 
@@ -1861,10 +2464,12 @@
               href="https://www.linkedin.com/in/vinicius-magalh%C3%A3es-5137402b9"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
+              class="btn btn-secondary">
+
               <i class="fab fa-linkedin"></i>
+
               LinkedIn
+
             </a>
 
 
@@ -1872,19 +2477,24 @@
               href="https://github.com/Viniciusmagal"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
+              class="btn btn-secondary">
+
               <i class="fab fa-github"></i>
+
               GitHub
+
             </a>
 
+
           </div>
+
 
         </div>
 
       </div>
 
     </section>
+
 
   </main>
 
@@ -1898,9 +2508,15 @@
     <div class="container">
 
       <p>
+
         Desenvolvido por
-        <span>Vinícius Magalhães</span>
+
+        <span>
+          Vinícius Magalhães
+        </span>
+
         · 2026
+
       </p>
 
     </div>
@@ -1914,50 +2530,24 @@
 
   <script>
 
-    /* =========================================================
-       CONFIGURAÇÃO
-    ========================================================= */
+    /*
+     * ========================================================
+     * CONFIGURAÇÃO
+     * ========================================================
+     *
+     * ESTE É O SEU USUÁRIO DO GITHUB.
+     *
+     * O site vai buscar os repositórios automaticamente.
+     */
 
     const GITHUB_USERNAME = "Viniciusmagal";
 
-    /*
-      Coloque aqui os nomes dos projetos que você quer
-      destacar no topo.
-
-      Exemplo:
-
-      const FEATURED_PROJECTS = [
-        "devtrack-ai",
-        "pesqueiro-santa-rita"
-      ];
-
-      O nome precisa ser exatamente o nome do repositório.
-    */
-
-    const FEATURED_PROJECTS = [
-      "DevTrack-AI",
-      "Pesqueiro-Santa-Rita"
-    ];
-
 
     /*
-      Se quiser esconder algum repositório do portfólio,
-      coloque o nome dele aqui.
-
-      Exemplo:
-
-      const HIDDEN_PROJECTS = [
-        "teste",
-        "atividade-faculdade"
-      ];
-    */
-
-    const HIDDEN_PROJECTS = [];
-
-
-    /* =========================================================
-       ELEMENTOS
-    ========================================================= */
+     * ========================================================
+     * ELEMENTOS
+     * ========================================================
+     */
 
     const projectsContainer =
       document.getElementById("projects-container");
@@ -1965,16 +2555,24 @@
     const filtersContainer =
       document.getElementById("filters");
 
+
     let allProjects = [];
 
 
-    /* =========================================================
-       UTILITÁRIOS
-    ========================================================= */
+    /*
+     * ========================================================
+     * ESCAPAR HTML
+     * ========================================================
+     *
+     * Evita que caracteres vindos do GitHub
+     * sejam interpretados como HTML.
+     */
 
     function escapeHTML(text) {
 
-      if (!text) return "";
+      if (!text) {
+        return "";
+      }
 
       return text
         .replace(/&/g, "&amp;")
@@ -1986,10 +2584,21 @@
     }
 
 
+    /*
+     * ========================================================
+     * FORMATAR NÚMEROS
+     * ========================================================
+     */
+
     function formatNumber(number) {
 
       if (number >= 1000) {
-        return (number / 1000).toFixed(1) + "k";
+
+        return (
+          (number / 1000).toFixed(1)
+          + "k"
+        );
+
       }
 
       return number;
@@ -1997,9 +2606,17 @@
     }
 
 
+    /*
+     * ========================================================
+     * FORMATAR DATA
+     * ========================================================
+     */
+
     function formatDate(date) {
 
-      const dateObject = new Date(date);
+      const dateObject =
+        new Date(date);
+
 
       return dateObject.toLocaleDateString(
         "pt-BR",
@@ -2012,31 +2629,62 @@
     }
 
 
-    /* =========================================================
-       CARREGAR PERFIL DO GITHUB
-    ========================================================= */
+    /*
+     * ========================================================
+     * CARREGAR PERFIL DO GITHUB
+     * ========================================================
+     */
 
     async function loadGitHubProfile() {
 
       try {
 
-        const response = await fetch(
-          `https://api.github.com/users/${GITHUB_USERNAME}`
-        );
+        const response =
+          await fetch(
+            `https://api.github.com/users/${GITHUB_USERNAME}`
+          );
+
 
         if (!response.ok) {
-          throw new Error("Erro ao carregar perfil.");
+
+          throw new Error(
+            "Erro ao carregar perfil do GitHub."
+          );
+
         }
 
-        const user = await response.json();
 
-        document.getElementById("repo-count").textContent =
+        const user =
+          await response.json();
+
+
+        /*
+         * Repositórios
+         */
+
+        document.getElementById(
+          "repo-count"
+        ).textContent =
           user.public_repos;
 
-        document.getElementById("followers-count").textContent =
+
+        /*
+         * Seguidores
+         */
+
+        document.getElementById(
+          "followers-count"
+        ).textContent =
           user.followers;
 
-        document.getElementById("following-count").textContent =
+
+        /*
+         * Seguindo
+         */
+
+        document.getElementById(
+          "following-count"
+        ).textContent =
           user.following;
 
       }
@@ -2044,7 +2692,7 @@
       catch (error) {
 
         console.error(
-          "Não foi possível carregar o perfil do GitHub:",
+          "Erro ao carregar perfil:",
           error
         );
 
@@ -2053,90 +2701,103 @@
     }
 
 
-    /* =========================================================
-       CARREGAR REPOSITÓRIOS
-    ========================================================= */
+    /*
+     * ========================================================
+     * CARREGAR REPOSITÓRIOS
+     * ========================================================
+     */
 
     async function loadGitHubProjects() {
 
       try {
 
-        const response = await fetch(
-          `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`
-        );
+        /*
+         * Busca até 100 repositórios públicos.
+         *
+         * sort=updated
+         * faz os mais recentemente atualizados
+         * aparecerem primeiro.
+         */
+
+        const response =
+          await fetch(
+            `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`
+          );
+
 
         if (!response.ok) {
-          throw new Error("Erro ao carregar repositórios.");
+
+          throw new Error(
+            "Erro ao carregar repositórios."
+          );
+
         }
 
-        let repos = await response.json();
+
+        const repos =
+          await response.json();
 
 
         /*
-          Remove forks e repositórios escondidos.
-        */
+         * Remove forks.
+         *
+         * Assim mostramos somente projetos
+         * pertencentes ao seu perfil.
+         */
 
-        repos = repos.filter(repo => {
-
-          const isHidden =
-            HIDDEN_PROJECTS
-              .map(name => name.toLowerCase())
-              .includes(repo.name.toLowerCase());
-
-          return !repo.fork && !isHidden;
-
-        });
+        allProjects =
+          repos.filter(
+            repo => !repo.fork
+          );
 
 
         /*
-          Ordena:
-          1. Projetos destacados
-          2. Estrelas
-          3. Atualização
-        */
+         * Ordena pelos mais recentemente
+         * atualizados.
+         */
 
-        repos.sort((a, b) => {
-
-          const aFeatured =
-            FEATURED_PROJECTS
-              .map(name => name.toLowerCase())
-              .includes(a.name.toLowerCase());
-
-          const bFeatured =
-            FEATURED_PROJECTS
-              .map(name => name.toLowerCase())
-              .includes(b.name.toLowerCase());
+        allProjects.sort(
+          (a, b) =>
+            new Date(b.updated_at) -
+            new Date(a.updated_at)
+        );
 
 
-          if (aFeatured && !bFeatured) return -1;
+        /*
+         * Calcula estrelas.
+         */
 
-          if (!aFeatured && bFeatured) return 1;
-
-
-          if (b.stargazers_count !== a.stargazers_count) {
-            return b.stargazers_count - a.stargazers_count;
-          }
-
-
-          return new Date(b.updated_at) -
-                 new Date(a.updated_at);
-
-        });
+        calculateStars(
+          allProjects
+        );
 
 
-        allProjects = repos;
+        /*
+         * Cria filtros.
+         */
 
-        createFilters(repos);
+        createFilters(
+          allProjects
+        );
 
-        renderProjects(repos);
 
-        calculateStars(repos);
+        /*
+         * Mostra projetos.
+         */
+
+        renderProjects(
+          allProjects
+        );
 
       }
 
       catch (error) {
 
-        console.error(error);
+        console.error(
+          "Erro ao carregar projetos:",
+          error
+        );
+
 
         projectsContainer.innerHTML = `
 
@@ -2148,22 +2809,28 @@
                 font-size: 30px;
                 color: #3b82f6;
                 margin-bottom: 15px;
-              "
-            ></i>
+              ">
+            </i>
+
 
             <p>
               Não foi possível carregar os projetos agora.
             </p>
 
+
             <br>
 
+
             <a
-              href="https://github.com/Viniciusmagal"
+              href="https://github.com/${GITHUB_USERNAME}"
               target="_blank"
-              class="btn btn-secondary"
-            >
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+
               <i class="fab fa-github"></i>
-              Ver no GitHub
+
+              Ver meus projetos no GitHub
+
             </a>
 
           </div>
@@ -2175,84 +2842,127 @@
     }
 
 
-    /* =========================================================
-       FILTROS
-    ========================================================= */
+    /*
+     * ========================================================
+     * CRIAR FILTROS
+     * ========================================================
+     */
 
     function createFilters(repos) {
 
-      const languages = new Set();
+      /*
+       * Pega todas as linguagens utilizadas.
+       */
+
+      const languages =
+        new Set();
 
 
-      repos.forEach(repo => {
+      repos.forEach(
+        repo => {
 
-        if (repo.language) {
-          languages.add(repo.language);
+          if (repo.language) {
+
+            languages.add(
+              repo.language
+            );
+
+          }
+
         }
-
-      });
+      );
 
 
       /*
-        Algumas linguagens muito comuns aparecem primeiro.
-      */
+       * Ordena alfabeticamente.
+       */
 
       const sortedLanguages =
         [...languages].sort();
 
 
-      sortedLanguages.forEach(language => {
+      /*
+       * Cria botão para cada linguagem.
+       */
 
-        const button =
-          document.createElement("button");
+      sortedLanguages.forEach(
+        language => {
 
-        button.className = "filter-btn";
+          const button =
+            document.createElement(
+              "button"
+            );
 
-        button.dataset.filter = language;
 
-        button.textContent = language;
+          button.className =
+            "filter-btn";
 
 
-        button.addEventListener(
-          "click",
-          () => {
+          button.dataset.filter =
+            language;
 
-            document
-              .querySelectorAll(".filter-btn")
-              .forEach(btn =>
-                btn.classList.remove("active")
+
+          button.textContent =
+            language;
+
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              /*
+               * Remove active
+               * dos outros botões.
+               */
+
+              document
+                .querySelectorAll(
+                  ".filter-btn"
+                )
+                .forEach(
+                  btn =>
+                    btn.classList.remove(
+                      "active"
+                    )
+                );
+
+
+              button.classList.add(
+                "active"
               );
 
-            button.classList.add("active");
 
-            if (language === "all") {
-
-              renderProjects(allProjects);
-
-            } else {
+              /*
+               * Filtra.
+               */
 
               const filtered =
                 allProjects.filter(
                   repo =>
-                    repo.language === language
+                    repo.language ===
+                    language
                 );
 
-              renderProjects(filtered);
+
+              renderProjects(
+                filtered
+              );
 
             }
-
-          }
-        );
+          );
 
 
-        filtersContainer.appendChild(button);
+          filtersContainer.appendChild(
+            button
+          );
 
-      });
+        }
+      );
 
 
       /*
-        Configura botão "Todos".
-      */
+       * Botão TODOS.
+       */
 
       const allButton =
         document.querySelector(
@@ -2265,14 +2975,25 @@
         () => {
 
           document
-            .querySelectorAll(".filter-btn")
-            .forEach(btn =>
-              btn.classList.remove("active")
+            .querySelectorAll(
+              ".filter-btn"
+            )
+            .forEach(
+              btn =>
+                btn.classList.remove(
+                  "active"
+                )
             );
 
-          allButton.classList.add("active");
 
-          renderProjects(allProjects);
+          allButton.classList.add(
+            "active"
+          );
+
+
+          renderProjects(
+            allProjects
+          );
 
         }
       );
@@ -2280,11 +3001,19 @@
     }
 
 
-    /* =========================================================
-       RENDERIZAR PROJETOS
-    ========================================================= */
+    /*
+     * ========================================================
+     * RENDERIZAR PROJETOS
+     * ========================================================
+     */
 
-    function renderProjects(repos) {
+    function renderProjects(
+      repos
+    ) {
+
+      /*
+       * Caso não existam projetos.
+       */
 
       if (!repos.length) {
 
@@ -2297,8 +3026,9 @@
               style="
                 font-size: 30px;
                 margin-bottom: 15px;
-              "
-            ></i>
+              ">
+            </i>
+
 
             <p>
               Nenhum projeto encontrado.
@@ -2313,191 +3043,266 @@
       }
 
 
-      projectsContainer.innerHTML = "";
+      /*
+       * Limpa os projetos antigos.
+       */
+
+      projectsContainer.innerHTML =
+        "";
 
 
-      repos.forEach(repo => {
+      /*
+       * Cria um card para cada repositório.
+       */
 
-        const card =
-          document.createElement("article");
-
-
-        card.className = "project-card";
-
-
-        const isFeatured =
-          FEATURED_PROJECTS
-            .map(name => name.toLowerCase())
-            .includes(repo.name.toLowerCase());
+      repos.forEach(
+        repo => {
 
 
-        if (isFeatured) {
-          card.classList.add("featured");
-        }
+          const card =
+            document.createElement(
+              "article"
+            );
 
 
-        const topics =
-          repo.topics || [];
+          card.className =
+            "project-card";
 
 
-        const topicsHTML =
-          topics
-            .slice(0, 4)
-            .map(topic =>
-              `<span class="topic">${escapeHTML(topic)}</span>`
-            )
-            .join("");
+          /*
+           * Tópicos do GitHub.
+           */
+
+          const topics =
+            repo.topics || [];
 
 
-        card.innerHTML = `
+          const topicsHTML =
+            topics
+              .slice(0, 5)
+              .map(
+                topic =>
 
-          ${
-            isFeatured
-              ? `<div class="featured-badge">
-                   <i class="fas fa-star"></i>
-                   Destaque
-                 </div>`
-              : ""
-          }
+                  `<span class="topic">
+                    ${escapeHTML(topic)}
+                  </span>`
+
+              )
+              .join("");
 
 
-          <div class="project-top">
+          /*
+           * Descrição.
+           */
 
-            <div class="project-icon">
-              <i class="far fa-folder-open"></i>
+          const description =
+            repo.description ||
+            "Projeto desenvolvido por Vinícius Magalhães.";
+
+
+          /*
+           * Homepage.
+           *
+           * Só mostra botão caso
+           * o projeto tenha URL.
+           */
+
+          const homepageButton =
+            repo.homepage
+              ? `
+
+                <a
+                  href="${repo.homepage}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Abrir projeto">
+
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+
+                </a>
+
+              `
+              : "";
+
+
+          /*
+           * HTML do card.
+           */
+
+          card.innerHTML = `
+
+            <div class="project-top">
+
+
+              <div class="project-icon">
+
+                <i class="far fa-folder-open"></i>
+
+              </div>
+
+
+              <div class="project-links">
+
+
+                <a
+                  href="${repo.html_url}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ver código no GitHub">
+
+                  <i class="fab fa-github"></i>
+
+                </a>
+
+
+                ${homepageButton}
+
+
+              </div>
+
+
             </div>
 
 
-            <div class="project-links">
+            <h3>
 
-              <a
-                href="${repo.html_url}"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Ver código no GitHub"
-                aria-label="Ver código no GitHub"
-              >
-                <i class="fab fa-github"></i>
-              </a>
+              ${escapeHTML(
+                repo.name
+              )}
+
+            </h3>
+
+
+            <p class="project-description">
+
+              ${escapeHTML(
+                description
+              )}
+
+            </p>
+
+
+            <div class="project-meta">
 
 
               ${
-                repo.homepage
+                repo.language
                   ? `
-                    <a
-                      href="${repo.homepage}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title="Abrir projeto"
-                      aria-label="Abrir projeto"
-                    >
-                      <i class="fas fa-arrow-up-right-from-square"></i>
-                    </a>
+
+                    <span>
+
+                      <span
+                        class="language-dot">
+                      </span>
+
+                      ${escapeHTML(
+                        repo.language
+                      )}
+
+                    </span>
+
                   `
                   : ""
               }
 
-            </div>
 
-          </div>
+              <span>
 
+                <i class="far fa-star"></i>
 
-          <h3>
-            ${escapeHTML(repo.name)}
-          </h3>
+                ${formatNumber(
+                  repo.stargazers_count
+                )}
 
-
-          <p class="project-description">
-
-            ${
-              escapeHTML(
-                repo.description ||
-                "Projeto desenvolvido por Vinícius Magalhães."
-              )
-            }
-
-          </p>
+              </span>
 
 
-          <div class="project-meta">
+              <span>
 
-            ${
-              repo.language
-                ? `
-                  <span>
-                    <span class="language-dot"></span>
-                    ${escapeHTML(repo.language)}
-                  </span>
-                `
-                : ""
-            }
+                <i class="fas fa-code-branch"></i>
 
+                ${formatNumber(
+                  repo.forks_count
+                )}
 
-            <span>
-              <i class="far fa-star"></i>
-              ${formatNumber(repo.stargazers_count)}
-            </span>
+              </span>
 
-
-            <span>
-              <i class="fas fa-code-branch"></i>
-              ${formatNumber(repo.forks_count)}
-            </span>
-
-          </div>
-
-
-          <div class="project-footer">
-
-            <div class="topics">
-
-              ${topicsHTML}
 
             </div>
 
 
-            <span class="project-date">
-
-              ${formatDate(repo.updated_at)}
-
-            </span>
-
-          </div>
-
-        `;
+            <div class="project-footer">
 
 
-        projectsContainer.appendChild(card);
+              <div class="topics">
 
-      });
+                ${topicsHTML}
+
+              </div>
+
+
+              <span class="project-date">
+
+                ${formatDate(
+                  repo.updated_at
+                )}
+
+              </span>
+
+
+            </div>
+
+          `;
+
+
+          /*
+           * Adiciona card à página.
+           */
+
+          projectsContainer.appendChild(
+            card
+          );
+
+        }
+      );
 
     }
 
 
-    /* =========================================================
-       CALCULAR ESTRELAS
-    ========================================================= */
+    /*
+     * ========================================================
+     * CALCULAR TOTAL DE ESTRELAS
+     * ========================================================
+     */
 
-    function calculateStars(repos) {
+    function calculateStars(
+      repos
+    ) {
 
       const totalStars =
         repos.reduce(
           (total, repo) =>
-            total + repo.stargazers_count,
+            total +
+            repo.stargazers_count,
           0
         );
 
 
       document.getElementById(
         "stars-count"
-      ).textContent = formatNumber(totalStars);
+      ).textContent =
+        formatNumber(
+          totalStars
+        );
 
     }
 
 
-    /* =========================================================
-       INICIALIZAÇÃO
-    ========================================================= */
+    /*
+     * ========================================================
+     * INICIAR
+     * ========================================================
+     */
 
     loadGitHubProfile();
 
@@ -2506,4 +3311,5 @@
   </script>
 
 </body>
+
 </html>
